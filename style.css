@@ -7,12 +7,7 @@
 }
 
 body {
-   width: 1600px;
    margin: 0 auto;
-}
-
-.container {
-   padding-inline: 230px;
 }
 
 .content_header {
@@ -21,6 +16,7 @@ body {
    align-items: center;
    height: 75px;
    background-color: #222222;
+   padding-inline: 230px;
 }
 
 .search {
@@ -40,19 +36,41 @@ body {
    justify-content: space-between;
 }
 
+.basket {
+   position: relative;
+}
+
+.circle {
+   height: 19px;
+   width: 19px;
+   border-radius: 50%;
+   background-color: rgba(241, 109, 127);
+   color: white;
+   display: grid;
+   place-content: center;
+   position: absolute;
+   top: -7px;
+   right: -9px;
+}
+
 .first_section {
    background: #F1E4E6;
    height: 764px;
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
    align-items: center;
    gap: 65px;
 }
 
+.brand-img {
+   background-image: url(./image/foto/main\ photo.png);
+   background-size: cover;
+   height: 100%;
+}
+
 .brand {
-   /* width: 405px; */
    height: 93px;
    display: flex;
-   /* justify-content: space-between; */
    align-items: center;
    gap: 16px;
 }
@@ -78,17 +96,16 @@ body {
 }
 
 .second_section {
-   padding-block: 60px;
+   padding-block: 65px;
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding-inline: 230px;
 }
 
 .catalog {
-   height: 470px;
-   width: 100%;
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: repeat(3, 360px);
    grid-template-rows: 260px 180px;
    gap: 30px;
    margin-bottom: 96px;
@@ -97,25 +114,25 @@ body {
 
 .for-women {
    background-image: url(./image/foto/for\ women.png);
-   height: 100%;
+   background-size: cover;
    grid-area: 1 / 1 / 2 / 2;
 }
 
 .for-men {
    background-image: url(./image/foto/for\ men.png);
-   height: 100%;
+   background-size: cover;
    grid-area: 1 / 2 / 2 / 3;
 }
 
 .for-kids {
    background-image: url(./image/foto/for\ kids.png);
-   height: 100%;
+   background-size: cover;
    grid-area: 1 / 3 / 2 / 4;
 }
 
 .accesories {
    background-image: url(./image/foto/accesories.png);
-   height: 100%;
+   background-size: cover;
    grid-area: 2 / 1 / 3 / 4;
 }
 
@@ -165,8 +182,8 @@ body {
 .product_cards {
    width: 100%;
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
+   grid-template-columns: repeat(3, 360px);
+   grid-template-rows: repeat(2, 580px);
    gap: 30px;
    margin-top: 48px;
 }
@@ -209,24 +226,60 @@ body {
    grid-area: 1 / 1 / 2 / 2;
 }
 
+.backpack {
+   background-image: url(./image/foto/man\ with\ backpack.jpg);
+   background-size: cover;
+   height: 420px;
+}
+
 .two {
    grid-area: 1 / 2 / 2 / 3;
+}
+
+.readhead {
+   background-image: url(./image/foto/readhead.png);
+   background-size: cover;
+   height: 420px;
 }
 
 .three {
    grid-area: 1 / 3 / 2 / 4;
 }
 
+.hoodie {
+   background-image: url(./image/foto/guy\ in\ hoodie.png);
+   background-size: cover;
+   height: 420px;
+}
+
 .four {
    grid-area: 2 / 1 / 3 / 2;
+}
+
+.sneakers {
+   background-image: url(./image/foto/bearded\ in\ sneakers.png);
+   background-size: cover;
+   height: 420px;
 }
 
 .five {
    grid-area: 2 / 2 / 3 / 3;
 }
 
+.jacket {
+   background-image: url(./image/foto/brunette\ in\ a\ jacket.png);
+   background-size: cover;
+   height: 420px;
+}
+
 .six {
    grid-area: 2 / 3 / 3 / 4;
+}
+
+.shirt {
+   background-image: url(./image/foto/girl\ in\ a\ shirt.png);
+   background-size: cover;
+   height: 420px;
 }
 
 .browse-product {
@@ -239,4 +292,149 @@ body {
 
 .browse-product:active {
    background-color: rgba(255, 106, 106);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+   .content_header {
+      padding-inline: 32px;
+   }
+
+   .first_section {
+      height: 368px;
+   }
+
+   .brand .brand_name {
+      font-size: 44px;
+      line-height: 53px;
+   }
+
+   .brand .fashion_type {
+      font-size: 24px;
+      line-height: 29px;
+   }
+
+   .second_section {
+      padding-inline: 16px;
+   }
+
+   .catalog {
+      height: 303px;
+      grid-template-columns: repeat(3, 230px);
+      grid-template-rows: 167px 116px;
+      gap: 20px;
+   }
+
+   .product_cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 360px);
+      grid-template-rows: repeat(3, 580px);
+      gap: 16px;
+   }
+
+   .one {
+      grid-area: 1 / 1 / 2 / 2;
+   }
+
+   .two {
+      grid-area: 1 / 2 / 2 / 3;
+   }
+
+   .three {
+      grid-area: 2 / 1 / 3 / 2;
+   }
+
+   .four {
+      grid-area: 2 / 2 / 3 / 3;
+   }
+
+   .five {
+      grid-area: 3 / 1 / 4 / 2;
+   }
+
+   .six {
+      grid-area: 3 / 2 / 4 / 3;
+   }
+}
+
+@media (max-width: 767px) {
+
+   .user,
+   .basket {
+      display: none;
+   }
+
+   .content_header {
+      padding-inline: 16px;
+   }
+
+   .navigation {
+      width: 32px;
+   }
+
+   .brand-img {
+      display: none;
+   }
+
+   .first_section {
+      height: 373px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .catalog {
+      grid-template-columns: 343px;
+      grid-template-rows: repeat(3, 248px) 111px;
+      gap: 32px;
+      margin-bottom: 64px;
+   }
+
+   .for-women {
+      grid-area: 1 / 1 / 2 / 2;
+   }
+
+   .for-men {
+      grid-area: 2 / 1 / 3 / 2;
+   }
+
+   .for-kids {
+      grid-area: 3 / 1 / 4 / 2;
+   }
+
+   .accesories {
+      grid-area: 4 / 1 / 5 / 2;
+   }
+
+   .product_cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 360px;
+      grid-template-rows: repeat(6, 580px);
+      gap: 16px;
+   }
+
+   .one {
+      grid-area: 1 / 1 / 2 / 2;
+   }
+
+   .two {
+      grid-area: 2 / 1 / 3 / 2;
+   }
+
+   .three {
+      grid-area: 3 / 1 / 4 / 2;
+   }
+
+   .four {
+      grid-area: 4 / 1 / 5 / 2;
+   }
+
+   .five {
+      grid-area: 5 / 1 / 6 / 2;
+   }
+
+   .six {
+      grid-area: 6 / 1 / 7 / 2;
+   }
 }
