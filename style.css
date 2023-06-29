@@ -288,10 +288,16 @@ body {
    margin-top: 48px;
    border: 1px solid rgba(255, 106, 106);
    cursor: pointer;
+   color: rgba(255, 106, 106);
+   font-family: Lato;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
 }
 
 .browse-product:active {
    background-color: rgba(255, 106, 106);
+   color: white;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
