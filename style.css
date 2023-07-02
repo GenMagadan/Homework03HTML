@@ -390,7 +390,8 @@ body {
    }
 
    .catalog {
-      grid-template-columns: 343px;
+      /* grid-template-columns: 343px; */
+      grid-template-columns: minmax(343px, 1fr);
       grid-template-rows: repeat(3, 248px) 111px;
       gap: 32px;
       margin-bottom: 64px;
@@ -412,10 +413,14 @@ body {
       grid-area: 4 / 1 / 5 / 2;
    }
 
+   .second_section {
+      padding: 16px;
+   }
+
    .product_cards {
       width: 100%;
       display: grid;
-      grid-template-columns: 360px;
+      grid-template-columns: minmax(360px, 1fr);
       grid-template-rows: repeat(6, 580px);
       gap: 16px;
    }
